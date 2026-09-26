@@ -31,4 +31,9 @@ public class ReceiptController {
     public Optional<Receipt> getReceiptById(@PathVariable Long id) {
         return receiptService.getReceiptById(id);
     }
+
+    @PutMapping("/{id}/validate")
+    public Receipt validateReceipt(@PathVariable Long id) {
+        return receiptService.validateReceipt(id);
+    }
 }
